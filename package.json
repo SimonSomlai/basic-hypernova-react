@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "build-ssr": "webpack --config webpack.ssr.config.js",
-    "start-ssr": "node ./hypernova/server.js",
-    "start": "yarn run build && node webserver.js"
+    "build-hypernova": "webpack --config webpack.ssr.config.js",
+    "build-web": "webpack",
+    "build-all": "yarn run build-web && yarn run build-hypernova",
+    "start-hypernova": "node ./hypernova/server.js",
+    "start-web": "node webserver.js"
   },
   "dependencies": {
     "axios": "^0.16.2",
